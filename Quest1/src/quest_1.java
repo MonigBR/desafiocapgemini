@@ -14,7 +14,7 @@ public class quest_1 {
  * 
  */
 		Scanner sc = new Scanner(System.in);
-		
+		System.out.print("Quantos degraus devem ter? ");
 		int numberSteps = sc.nextInt();	
 /**
  * Comando de repeticao que gera a quantidade de degraus		
