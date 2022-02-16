@@ -17,37 +17,49 @@ public class Senha {
 		this.novaSenha = novaSenha;
 	}
 
-	public void diferenca(String Senha ) {
+	public void digiteSenha(String Senha ) {
 
 		int x=0;
 		int y=0;
-		int z=0;		
+		int z=0;
+		int a=0;
 		int digito=0; 
 		int maiusculo=0;
 		int minusculo=0;
+		int caractere=0;
 		
 		for (int i = 0; i < this.getNovaSenha().length();i++) {					
 			
-			if (Character.isDigit(this.getNovaSenha().charAt(i))){
-				x += 0;
+			if (Character.isDigit(this.getNovaSenha().charAt(i))){	x += 0;
 			}
-			else {
-				x += 1;
+			else {x += 1;
 			}
 											
-			if (Character.isUpperCase(this.getNovaSenha().charAt(i))){
-				y += 0;
+			if (Character.isUpperCase(this.getNovaSenha().charAt(i))){y += 0;
 			}
-			else {
-				y += 1;
+			else {y += 1;
 			}
 			
-			if (Character.isLowerCase(this.getNovaSenha().charAt(i))){					
-				z += 0;
+			if (Character.isLowerCase(this.getNovaSenha().charAt(i))){z += 0;
 			}
-			else {
-				z += 1;
-			}			
+			else {z += 1;
+			}	
+			
+			if (this.getNovaSenha().charAt(i) == ('@')
+					||this.getNovaSenha().charAt(i) == ('#')
+					||this.getNovaSenha().charAt(i) == ('$')
+					||this.getNovaSenha().charAt(i) == ('%')
+					||this.getNovaSenha().charAt(i) == ('^')
+					||this.getNovaSenha().charAt(i) == ('&')
+					||this.getNovaSenha().charAt(i) == ('*')
+					||this.getNovaSenha().charAt(i) == (')')
+					||this.getNovaSenha().charAt(i) == ('(')
+					||this.getNovaSenha().charAt(i) == ('+')
+					||this.getNovaSenha().charAt(i) == ('-')) {a +=0;		
+			}
+			else {a += 1;
+			}
+			
 		}
 		
 		if (this.getNovaSenha().length() == x) {
@@ -59,16 +71,19 @@ public class Senha {
 		if (this.getNovaSenha().length() == z) {
 			minusculo = 1;
 		}
+		if (this.getNovaSenha().length() == a) {
+			caractere = 1;
+		}
+			
+		int tamanhoMin = 6;
+		int caracteresFaltando = digito+minusculo+maiusculo+caractere;	
+		int senha = Math.max(tamanhoMin - getNovaSenha().length(), caracteresFaltando);
 		
-		int tamanhomin = 6;
-		int caracteresFal = digito+minusculo+maiusculo;	
-		int newsenha = Math.max(tamanhomin - getNovaSenha().length(), caracteresFal);
-		
-		if (newsenha <= 0) {
+		if (senha <= 0) {
 			System.out.println("senha é forte");
 		}
 		else {
-			System.out.printf("Faltam %d caracteres para sua senha ser forte.", newsenha);	
+			System.out.printf("Faltam %d caracteres para sua senha ser considerada forte.", senha);	
 		}			
 	}
 }

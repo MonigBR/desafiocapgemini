@@ -6,12 +6,12 @@ public class SenhaController {
 
 	Scanner sc = new Scanner(System.in);
 	
-	System.out.print("  senha: ");
+	System.out.print("Digite sua senha: ");
 	String novaSenha = sc.next();
 	
 	Senha senha = new Senha(novaSenha); 
 	
-	senha.diferenca(novaSenha);
+	senha.digiteSenha(novaSenha);
 		
 	sc.close();
 	}
