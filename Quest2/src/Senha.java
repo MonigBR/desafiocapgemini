@@ -1,3 +1,11 @@
+/** Classe Senha, onde estao contidos os parammetros e metodos para o mesmo
+ * 
+ * @author Michel Konig
+ *
+ *Parametro que compoem a classe Senha:
+ *String novaSenha - conjunto de caracteres que será a senha
+ */
+
 public class Senha {
 	
 	public Senha(String novaSenha) {
@@ -9,6 +17,11 @@ public class Senha {
 
 	private String novaSenha;
 	
+/**Método para o retorno da senha informada
+* 
+* @return String - senha informada
+ */
+	
 	public String getNovaSenha() {
 		return novaSenha;
 	}
@@ -16,6 +29,11 @@ public class Senha {
 	public void setNovaSenha(String novaSenha) {
 		this.novaSenha = novaSenha;
 	}
+	
+/**Método que determina se a senha informada atende os requesitos necessários
+* 
+* @param Senha - senha informada
+*/
 
 	public void digiteSenha(String Senha ) {
 
@@ -83,7 +101,7 @@ public class Senha {
 			System.out.println("senha é forte");
 		}
 		else {
-			System.out.printf("Faltam %d caracteres para sua senha ser considerada forte.", senha);	
+			System.out.printf("Faltam %d caracteres para sua senha ser considerada forte.", senha);
 		}			
 	}
 }

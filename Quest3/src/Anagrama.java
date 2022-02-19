@@ -1,11 +1,20 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
-	
+/** Classe Senha, algoritmo que informa o número de pares de substrings que são anagramas
+ * 
+ * @author Michel Konig
+ * 
+ */	
 public class Anagrama {
 
 	public static void main(String[] args) {
-		
+
+/**Método de entrada do o conjunto de caracteres para saber o número de pares de substrings que são anagramas
+ *
+ *@param String anagramas - conjunto de caracteres
+ *
+ */
 		Scanner sc = new Scanner(System.in);	
 		System.out.println();
 		System.out.print("Digite o conjunto de caracteres para saber quantos anagramas apartir dos subconjutos formados serão gerados: ");
@@ -14,7 +23,10 @@ public class Anagrama {
 		System.out.println();	
 		sc.close();
 		}
-	
+/**Método o número de pares de substrings que são anagramas
+* 
+* @param Anagramas - conjunto de caracteres
+*/	
 	public static void anagramas(String conjunto) {
 		HashMap<String, Integer> sub = new HashMap<>();	
 		int anagramas = 0;
