@@ -10,20 +10,13 @@ Para execução do código, é necessário a instalação do [JDK 11.0.13](https
 
 Para a execução do programa 
 - Descompacte o arquivo `desafiocapgemini-main.zip` localmente
-- No Prompt de Comando aberto nesse diretório, execute o comando para executar a aplicação:
-	```
-	mvnw spring-boot:run
-	```
-	ou
-	```
-	mvn spring-boot:run
-	```
+- Execute com uma IDEA de preferencia.
 
 #### TECNOLOGIAS
 As seguintes ferramentas foram usadas na construção do projeto:
 - Java
 - Maven
-- [SpringBoot](https://spring.io/projects/spring-boot)
+- IDEA utilizada pelo autor: [SpringBoot](https://spring.io/projects/spring-boot)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [Git/GitHub](https://github.com)
 
