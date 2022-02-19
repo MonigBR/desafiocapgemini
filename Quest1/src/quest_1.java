@@ -17,7 +17,9 @@ public class quest_1 {
 		System.out.print("Quantos degraus devem ter? ");
 		int numberSteps = sc.nextInt();	
 /**
- * Comando de repeticao que gera a quantidade de degraus		
+ * Comando de repeticao que gera a quantidade de degraus	
+ * 
+ * @param int numberSteps - número degraus desejados	
  */
 		for (int i=1; i<=numberSteps; i++) {
 			int inverse = numberSteps-i;

@@ -25,7 +25,7 @@ public class Anagrama {
 		}
 /**Método o número de pares de substrings que são anagramas
 * 
-* @param Anagramas - conjunto de caracteres
+* @param conjunto - conjunto de caracteres para gerar os anagramas
 */	
 	public static void anagramas(String conjunto) {
 		HashMap<String, Integer> sub = new HashMap<>();	
